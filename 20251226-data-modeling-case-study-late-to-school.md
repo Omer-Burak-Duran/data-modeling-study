@@ -5,13 +5,13 @@ I missed the bus because it rained, so I was late to class.
 ### Step 0) turning the sentence into “events + variables”
 
 - Event A: Rain happened (during some time window)
-- Event B: You attempted to catch a specific bus trip
-- Outcome 1: You missed that bus
-- Outcome 2: You arrived late to a class session
+- Event B: Attempted to catch a specific bus trip
+- Outcome 1: Missed that bus
+- Outcome 2: Arrived late to a class session
 - Causal claim: Rain -> MissedBus -> LateToClass
 
-The key modeling move: 
-- reify verbs into events when you need time, context, or evidence
+Key modeling move: 
+- reifying verbs into events when there is need for time, context, or evidence
 
 ### Step 1) Competency questions
 
@@ -37,9 +37,9 @@ For example:
 - Person(person_id, name)
 - BusRoute(route_id, name)
 - ClassSession(session_id, course_code, start_time, location)
-- WeatherObservation(obs_id, ts_start, ts_end, location, - precipitation_mm, is_raining)
-- CommuteAttempt(attempt_id, person_id, ts_depart_home, origin, - destination)
-- BusTrip(trip_id, route_id, scheduled_departure, actual_departure, - stop_location)
+- WeatherObservation(obs_id, ts_start, ts_end, location, precipitation_mm, is_raining)
+- CommuteAttempt(attempt_id, person_id, ts_depart_home, origin, destination)
+- BusTrip(trip_id, route_id, scheduled_departure, actual_departure, stop_location)
 - MissedBus(miss_id, attempt_id, trip_id, miss_reason, ts_recorded)
 - Arrival(arrival_id, attempt_id, location, arrived_at)
 - LateToClass(late_id, person_id, session_id, arrival_id, minutes_late)
