@@ -52,15 +52,13 @@ Thought process behind these choices:
 ### Knowledge graph model (knowledge level)
 
 Example triples in RDF style:
-- :Attempt_2025_12_25_0805  :agent        :Person01 .
-- :Attempt_2025_12_25_0805  :target       :CS101_Lecture_0900 .
-- :Attempt_2025_12_25_0805  :missedTrip   :BusTrip_34A_0815 .
-
-- :RainObs_0800_0830        :isRaining    true .
-- :RainObs_0800_0830        :observedAt   :HomeArea .
-- :Attempt_2025_12_25_0805  :hasContext   :RainObs_0800_0830 .
-
-- :LateEvent_1              :agent        :Omer .
-- :LateEvent_1              :forSession   :CS101_Lecture_0900 .
-- :LateEvent_1              :minutesLate  12 .
-- :LateEvent_1              :causedBy     :MissedBusEvent_1 .
+- (Attempt     hasAgent     Person)
+- (Attempt     hasTarget    Lecture)
+- (Attempt     missedTrip   BusTrip)
+- (RainObs     isRaining    true/false)
+- (RainObs     observedAt   HomeArea)
+- (Attempt     hasContext   RainObs)
+- (LateEvent   hasAgent     Omer)
+- (LateEvent   forSession   Lecture)
+- (LateEvent   minutesLate  lateMins)
+- (LateEvent   causedBy     MissedBusEvent)
